@@ -1,0 +1,278 @@
+{
+ "train_loans": 393276,
+ "test_loans": 283026,
+ "train_bad_rate": 0.1485,
+ "test_bad_rate": 0.1489,
+ "auc": {
+  "Lending Club sub-grade alone": 0.6787,
+  "Model without LC grade or rate": 0.6755,
+  "Model with LC grade and rate": 0.6961
+ },
+ "strategies": [
+  {
+   "strategy": "Buy every 2015 36-month loan",
+   "loans": 283026,
+   "default_rate": 0.1489,
+   "avg_int_rate": 11.28,
+   "pooled_ann_return": 0.0214
+  },
+  {
+   "strategy": "Grade A only",
+   "loans": 70118,
+   "default_rate": 0.0542,
+   "avg_int_rate": 6.9,
+   "pooled_ann_return": 0.0225
+  },
+  {
+   "strategy": "Grade B only",
+   "loans": 91725,
+   "default_rate": 0.119,
+   "avg_int_rate": 10.02,
+   "pooled_ann_return": 0.0242
+  },
+  {
+   "strategy": "Grade C only",
+   "loans": 77423,
+   "default_rate": 0.1944,
+   "avg_int_rate": 13.24,
+   "pooled_ann_return": 0.0213
+  },
+  {
+   "strategy": "Grade D only",
+   "loans": 32711,
+   "default_rate": 0.2622,
+   "avg_int_rate": 16.64,
+   "pooled_ann_return": 0.0161
+  },
+  {
+   "strategy": "Grade E only",
+   "loans": 9443,
+   "default_rate": 0.3284,
+   "avg_int_rate": 19.11,
+   "pooled_ann_return": 0.0072
+  },
+  {
+   "strategy": "Grade F only",
+   "loans": 1361,
+   "default_rate": 0.424,
+   "avg_int_rate": 23.54,
+   "pooled_ann_return": -0.0061
+  },
+  {
+   "strategy": "Grade G only",
+   "loans": 245,
+   "default_rate": 0.4612,
+   "avg_int_rate": 26.87,
+   "pooled_ann_return": -0.0181
+  },
+  {
+   "strategy": "Highest interest rate, top 10%",
+   "loans": 28302,
+   "default_rate": 0.3045,
+   "avg_int_rate": 18.29,
+   "pooled_ann_return": 0.0106
+  },
+  {
+   "strategy": "Lowest predicted default, top 10%",
+   "loans": 28302,
+   "default_rate": 0.0289,
+   "avg_int_rate": 6.39,
+   "pooled_ann_return": 0.0234
+  },
+  {
+   "strategy": "Highest predicted return, top 10%",
+   "loans": 28302,
+   "default_rate": 0.1397,
+   "avg_int_rate": 13.48,
+   "pooled_ann_return": 0.0316
+  },
+  {
+   "strategy": "Highest interest rate, top 20%",
+   "loans": 56605,
+   "default_rate": 0.2691,
+   "avg_int_rate": 16.81,
+   "pooled_ann_return": 0.0149
+  },
+  {
+   "strategy": "Lowest predicted default, top 20%",
+   "loans": 56605,
+   "default_rate": 0.0422,
+   "avg_int_rate": 6.98,
+   "pooled_ann_return": 0.024
+  },
+  {
+   "strategy": "Highest predicted return, top 20%",
+   "loans": 56605,
+   "default_rate": 0.1392,
+   "avg_int_rate": 12.81,
+   "pooled_ann_return": 0.0291
+  },
+  {
+   "strategy": "Highest interest rate, top 30%",
+   "loans": 84907,
+   "default_rate": 0.2478,
+   "avg_int_rate": 15.74,
+   "pooled_ann_return": 0.0169
+  },
+  {
+   "strategy": "Lowest predicted default, top 30%",
+   "loans": 84907,
+   "default_rate": 0.0549,
+   "avg_int_rate": 7.54,
+   "pooled_ann_return": 0.0242
+  },
+  {
+   "strategy": "Highest predicted return, top 30%",
+   "loans": 84907,
+   "default_rate": 0.1338,
+   "avg_int_rate": 12.11,
+   "pooled_ann_return": 0.0276
+  }
+ ],
+ "within_grade": [
+  {
+   "grade": "A",
+   "all_return": 0.0225,
+   "kept_half_return": 0.0231,
+   "all_default": 0.0542,
+   "kept_half_default": 0.0332
+  },
+  {
+   "grade": "B",
+   "all_return": 0.0242,
+   "kept_half_return": 0.0265,
+   "all_default": 0.119,
+   "kept_half_default": 0.0892
+  },
+  {
+   "grade": "C",
+   "all_return": 0.0213,
+   "kept_half_return": 0.0268,
+   "all_default": 0.1944,
+   "kept_half_default": 0.1523
+  },
+  {
+   "grade": "D",
+   "all_return": 0.0161,
+   "kept_half_return": 0.0229,
+   "all_default": 0.2622,
+   "kept_half_default": 0.215
+  },
+  {
+   "grade": "E",
+   "all_return": 0.0072,
+   "kept_half_return": 0.0169,
+   "all_default": 0.3284,
+   "kept_half_default": 0.2783
+  },
+  {
+   "grade": "F",
+   "all_return": -0.0061,
+   "kept_half_return": 0.0065,
+   "all_default": 0.424,
+   "kept_half_default": 0.3744
+  }
+ ],
+ "calibration": [
+  {
+   "pred": 0.0315,
+   "obs": 0.0289,
+   "n": 28303
+  },
+  {
+   "pred": 0.0516,
+   "obs": 0.0555,
+   "n": 28303
+  },
+  {
+   "pred": 0.0684,
+   "obs": 0.0802,
+   "n": 28302
+  },
+  {
+   "pred": 0.0858,
+   "obs": 0.1013,
+   "n": 28303
+  },
+  {
+   "pred": 0.1047,
+   "obs": 0.1207,
+   "n": 28302
+  },
+  {
+   "pred": 0.1255,
+   "obs": 0.1462,
+   "n": 28303
+  },
+  {
+   "pred": 0.1494,
+   "obs": 0.172,
+   "n": 28302
+  },
+  {
+   "pred": 0.1785,
+   "obs": 0.2091,
+   "n": 28303
+  },
+  {
+   "pred": 0.2172,
+   "obs": 0.2503,
+   "n": 28302
+  },
+  {
+   "pred": 0.2922,
+   "obs": 0.3242,
+   "n": 28303
+  }
+ ],
+ "importances": [
+  {
+   "feature": "sub_grade_rank",
+   "auc_drop": 0.0823
+  },
+  {
+   "feature": "fico",
+   "auc_drop": 0.0071
+  },
+  {
+   "feature": "addr_state",
+   "auc_drop": 0.0068
+  },
+  {
+   "feature": "dti",
+   "auc_drop": 0.0046
+  },
+  {
+   "feature": "emp_length",
+   "auc_drop": 0.0041
+  },
+  {
+   "feature": "open_acc",
+   "auc_drop": 0.0036
+  },
+  {
+   "feature": "home_ownership",
+   "auc_drop": 0.0032
+  },
+  {
+   "feature": "revol_bal",
+   "auc_drop": 0.0027
+  },
+  {
+   "feature": "inq_last_6mths",
+   "auc_drop": 0.0026
+  },
+  {
+   "feature": "int_rate",
+   "auc_drop": 0.0023
+  },
+  {
+   "feature": "credit_age_months",
+   "auc_drop": 0.0022
+  },
+  {
+   "feature": "purpose",
+   "auc_drop": 0.0022
+  }
+ ]
+}
